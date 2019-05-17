@@ -1,0 +1,48 @@
+.footer {
+    padding: 8rem;
+    background-color: $color_dark_blue;
+
+    &__list {
+        list-style-type: none;
+        display: grid;
+        // template for column. auto-fit is like flex-wrap: wrap in flexbox. it will produce a new row when the window is minimized. minmax is like max-width / min-width
+        grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); 
+        grid-gap: 2rem;
+        align-items: center;
+    }
+
+    &__item {
+
+    }
+
+    &__link:visited, &__link:link {
+        text-decoration: none;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 1.4rem;
+        color: #fff;
+        padding: 1.5rem;
+        display: block;
+        transition: all .2s;
+
+        &.active {
+            background-color: rgba(255, 255, 255, 0.05);
+            transform: translateY(-3px);
+        }
+
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+            transform: translateY(-3px);
+        }
+    }
+
+    &__copy {
+        font-size: 1.4rem;
+        color: #aaa;
+        margin-top: 6rem;
+        margin-right: auto;
+        margin-left: auto;
+        text-align: center;
+        width: 70%;
+    }
+}

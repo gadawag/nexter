@@ -1,0 +1,89 @@
+.header {
+    flex: 0 0 65%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image: linear-gradient(rgba(16, 29, 44, 0.93), rgba(16, 29, 44, 0.93)), url('../img/hero.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @include responsive(thousand){ //width < 1000?
+        padding-top: 5rem;
+    }
+
+    &__wrapper {
+        flex: 1;
+        max-width: 100rem;
+        padding: 5rem;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__logo {
+        height: 3rem;
+        margin-bottom: 10rem;
+        align-self: center;
+    
+        @include responsive(thousand){ //width < 1000?
+            margin-bottom: 5rem;
+        }
+    }
+
+    &__showcase {
+        margin-top: 10rem;
+
+        @include responsive(phone){ //width < 600?
+            margin-top: 5rem;
+        }
+    }
+
+    &__seenon-text-wrap {
+        margin-top: 20rem;
+        display: flex;
+        align-items: center;
+    
+        @include responsive(phone-tab){ //width < 800?
+            margin-top: 10rem;
+        }
+    
+        @include responsive(phone){ //width < 600?
+    
+        }
+    }
+
+    &__seenon-text-line {
+        height: 1px;
+        background-color: $color_gray_1;
+        flex: 1;
+    }
+
+    &__seenon-text {
+        text-align: center;
+        font-size: 1.6rem;
+        color: $color_gray_1;
+        margin: auto 2rem;
+    }
+
+    &__seenon-logos {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    &__seenon-logo {
+        max-height: 2.5rem;
+        max-width: 100%;
+        filter: brightness(70%);
+    
+        @include responsive(phone-tab){ //width < 800?
+            max-height: 2rem;
+        }
+    
+        @include responsive(phone){ //width < 600?
+            max-height: 1.5rem;
+        }
+    }
+}

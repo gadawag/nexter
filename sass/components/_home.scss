@@ -1,0 +1,80 @@
+.home {
+    flex: 0 0 33.33%;
+    padding: 2rem;
+
+    display: flex;
+    flex-direction: column;
+
+    @include responsive(phone-tab){ //width < 800?
+        flex: 0 0 50%;
+    }
+
+    @include responsive(phone){ //width < 600?
+        flex: 0 0 100%;
+    }
+
+    &__banner {
+        position: relative;
+    }
+
+    &__img {
+        width: 100%;
+        display: block;
+    }
+
+    &__like {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        height: 2.5rem;
+        width: 2.5rem;
+        fill: $color_primary;
+    }
+
+    &__content {
+        background-color: $color_light;
+    }
+
+    &__name {
+        width: 80%;
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 1.6rem;
+        margin: 0 auto;
+        text-align: center;
+        padding: 1.25rem;
+        background-color: #101d2c;
+        color: #fff;
+        font-weight: 400;
+        transform: translateY(-50%);
+    }
+
+    &__list {
+        list-style-type: none;
+        margin: 2rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    &__list-item {
+        margin-bottom: 2rem;
+
+        flex: 0 0 50%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        & p {
+            font-size: 1.5rem;
+        }
+    }
+
+    &__list-icon {
+        width: 2rem;
+        height: 2rem;
+        fill: $color_primary;
+        margin-right: 1rem;
+    }
+}

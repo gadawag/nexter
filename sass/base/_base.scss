@@ -1,0 +1,45 @@
+/*This will be used as global rem. root element.*/
+/*BASE DEFINITION OF OUR PROJECT*/
+html{
+    font-size: 62.5%; /* This will result to 10px because the default value is 16px. and the 62.5% of that is 10. */
+
+    //start from the bigger size because if we have 500 width. 2 media query will apply < 900 and < 600. so we want the smaller one.
+
+    @include responsive(big-desktop){ //width > 1800?
+        font-size: 65%; //1rem = 12px, 12/16 = 75%
+    }
+
+    @include responsive(tab-land){ //width < 1200?
+        font-size: 56.25%; //1rem = 9px, 9/16 = 56.25%
+    }
+
+    @include responsive(tab-port){ //width < 900?
+        font-size: 50%; //1rem = 8px, 8/16 = 50%
+    }
+
+    @include responsive(phone){ //width < 600?
+
+    }
+}
+
+body {
+    box-sizing: border-box;
+}
+
+* { /* each element will have this value */
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    
+   &:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+   } 
+
+   &:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+   }
+}

@@ -1,0 +1,66 @@
+body {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 300;
+    color: $color_text_primary;
+    line-height: 1.7;
+}
+
+.heading-1, .heading-2, .heading-3, .heading-4 {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 400;
+}
+
+.heading-1 {
+    font-size: 4.5rem;
+    color: $color_light;
+    margin: 1rem auto;
+    line-height: 1;
+}
+
+.heading-2 {
+    font-size: 4rem;
+    font-style: italic;
+    line-height: 1;
+
+    @include responsive(tab-land){ //width < 1200?
+        font-size: 3.5rem; //1rem = 9px, 9/16 = 56.25%
+    }
+
+    @include responsive(tab-port){ //width < 900?
+        font-size: 2.5rem; //1rem = 8px, 8/16 = 50%
+    }
+}
+
+.heading-2--dark {
+    color: $color_dark_brown;
+}
+
+.heading-3 {
+    font-size: 1.6rem;
+    color: $color_primary;
+    text-transform: uppercase;
+
+    @include responsive(tab-land){ //width < 1200?
+        font-size: 1.4rem; //1rem = 9px, 9/16 = 56.25%
+    }
+}
+
+.heading-4 {
+    font-size: 1.9rem;
+
+    @include responsive(tab-land){ //width < 1200?
+        font-size: 1.6rem; //1rem = 9px, 9/16 = 56.25%
+    }
+
+    @include responsive(tab-port){ //width < 900?
+        font-size: 1.4rem; //1rem = 8px, 8/16 = 50%
+    }
+
+    &--light {
+        color: $color_light;
+    }
+}
+
+.heading-4--dark {
+    color: $color_dark_brown;
+}

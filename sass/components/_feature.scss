@@ -1,0 +1,35 @@
+.feature {
+    flex: 0 0 33.33%;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding: 2rem;
+
+    @include responsive(phone-tab){ //width < 800?
+        flex: 0 0 50%;
+    }
+
+    @include responsive(phone){ //width < 600?
+        flex: 0 0 100%;
+    }
+
+    &__icon {
+        width: 4.5rem;
+        height: 4.5rem;
+        fill: $color_primary;
+        margin-right: 2rem;
+        transform: translateY(-1.25rem);
+
+        flex-shrink: 0;
+    }
+
+    &__content {
+        flex: 1;
+    }
+
+    &__text {
+        font-size: 1.7rem;
+    }
+}

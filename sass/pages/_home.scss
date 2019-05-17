@@ -1,0 +1,56 @@
+.container {
+    display: flex;
+
+    @include responsive(thousand){ //width < 1000?
+        flex-direction: column;
+    }
+}
+
+.content {
+    flex: 1;
+}
+
+.banner {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include responsive(phone-tab){ //width < 600?
+        flex-direction: column;
+    }
+}
+
+.features {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__wrapper {
+        margin: 10rem 5rem;
+        max-width: 114rem;
+
+        display: flex;
+        flex-wrap: wrap;
+    
+        @include responsive(phone-tab){ //width < 800?
+            margin: 6rem 5rem;
+        }
+    
+        @include responsive(phone){ //width < 600?
+    
+        }
+    }
+}
+
+.homes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__wrapper {
+        margin: 10rem 5rem;
+        max-width: 114rem;
+
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
